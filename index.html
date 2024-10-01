@@ -34,6 +34,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+
   <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -41,6 +42,7 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
 </head>
 <body>
 
@@ -287,6 +289,61 @@
 </section>
 
 
+  
+<div class="container is-max-desktop">
+<div class="columns is-centered has-text-centered">
+   <div class="comparison-block">
+<h4>Blind restoration</h4>
+<img-comparison-slider>
+  <img slot="first" src="static/images/blind/y/00000137.png" width="512"/>
+  <img slot="second" src="static/images/blind/pmrf/00000137.png" width="512"/>
+</img-comparison-slider>
+  </div>
+    </div>
+    </div>
+<hr>
+<div class="container is-max-desktop">
+<div class="columns is-centered has-text-centered">
+ <div class="comparison-block">
+<h4>Colorization</h4>
+<img-comparison-slider>
+  <img slot="first" src="static/images/colorization/y/00000065.png" width="230"/>
+  <img slot="second" src="static/images/colorization/pmrf/00000065.png" width="230"/>
+</img-comparison-slider>
+ </div>
+ <div class="comparison-block">
+   <h4>Inpainting</h4>
+
+<img-comparison-slider>
+  <img slot="first" src="static/images/inpainting/y/00000656.png" width="230"/>
+  <img slot="second" src="static/images/inpainting/pmrf/00000656.png" width="230"/>
+   </img-comparison-slider>
+  </div>
+ <div class="comparison-block">
+<h4>Denoising</h4>
+
+<img-comparison-slider>
+  <img slot="first" src="static/images/denoising/y/00000250.png" width="230"/>
+  <img slot="second" src="static/images/denoising/pmrf/00000250.png" width="230"/>
+   </img-comparison-slider></div>
+ <div class="comparison-block">
+<h4>Super-resolution</h4>
+<img-comparison-slider>
+  <img slot="first" src="static/images/sr/y/00000508.png" width="230"/>
+  <img slot="second" src="static/images/sr/pmrf/00000508.png" width="230"/>
+</img-comparison-slider>
+  </div>
+  </div>
+  </div>
+
+<script
+  defer
+  src="https://unpkg.com/img-comparison-slider@7/dist/index.js"
+></script>
+
+
+
+  
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
