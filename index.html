@@ -189,14 +189,39 @@
     <div class="hero-body">
 
       <h2 class="subtitle has-text-centered" style="font-size: 20px;">
-        PMRF is a novel photo-realistic image restoration algorithm. It (provably) approximates the optimal estimator that minimizes the MSE under a perfect perceptual quality constraint.
+        PMRF is a novel photo-realistic image restoration algorithm. It (provably) approximates the optimal estimator that minimizes the Mean Squared Error (MSE) under a perfect perceptual quality constraint.
       </h2>
+            
+      <div class="container is-max-desktop">
+<div class="columns is-centered has-text-centered">
+   <div class="comparison-block">
+     <br>
+         <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+
+          <h2 class="title is-4">Example: Blind face image restoration</h2>
+      </div>
+
+<!--<h4>Example: Blind face image restoration</h4>-->
+<img-comparison-slider>
+  <img slot="first" src="static/images/blind/y/00000137.png" width="512"/>
+  <img slot="second" src="static/images/blind/pmrf/00000137.png" width="512"/>
+</img-comparison-slider>
+  </div>
+    </div>
+    </div>
+    <br><br>
+      <h2 class="subtitle has-text-centered" style="font-size: 20px;">
+      Given a degraded image (e.g., noisy, blurry), PMRF first predicts the posterior mean (the reconstruction that attains the smallest possible MSE), and then transports the result to a high-quality image using a rectified flow model.
+      </h2>
+      <img src="static/flow.png" alt="Centered Image" style="max-width: 100%;">
       
-        <img src="static/flow.png" alt="Centered Image" style="max-width: 100%;">
       </div>
       </div>
     </div>
   </div>
+        </div>
+
 </section>
 
 
@@ -265,7 +290,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-4">Abstract</h2>
         <div class="content has-text-justified">
           <p style="font-size: 20px;">
             Photo-realistic image restoration algorithms are typically evaluated by distortion measures (e.g., PSNR, SSIM) and by perceptual quality measures (e.g., FID, NIQE), where the desire is to attain the lowest possible distortion without compromising on perceptual quality. To achieve this goal, current methods typically attempt to sample from the posterior distribution, or to optimize a weighted sum of a distortion loss (e.g., MSE) and a perceptual quality loss (e.g., GAN). Unlike previous works, this paper is concerned specifically with the optimal estimator that minimizes the MSE under a constraint of perfect perceptual index, namely where the distribution of the reconstructed images is equal to that of the ground-truth ones. A recent theoretical result shows that such an estimator can be constructed by optimally transporting the posterior mean prediction (MMSE estimate) to the distribution of the ground-truth images. Inspired by this result, we introduce Posterior-Mean Rectified Flow (PMRF), a simple yet highly effective algorithm that approximates this optimal estimator. In particular, PMRF first predicts the posterior mean, and then transports the result to a high-quality image using a rectified flow model that approximates the desired optimal transport map. We investigate the theoretical utility of PMRF and demonstrate that it consistently outperforms previous methods on a variety of image restoration tasks.
@@ -293,18 +318,14 @@
 
 
   
-<div class="container is-max-desktop">
-<div class="columns is-centered has-text-centered">
-   <div class="comparison-block">
-<h4>Blind restoration</h4>
-<img-comparison-slider>
-  <img slot="first" src="static/images/blind/y/00000137.png" width="512"/>
-  <img slot="second" src="static/images/blind/pmrf/00000137.png" width="512"/>
-</img-comparison-slider>
-  </div>
-    </div>
-    </div>
-<br>
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+
+          <h2 class="title is-4">Additional examples</h2>
+      </div><br>
+
 <div class="container is-max-desktop">
 <div class="columns is-centered has-text-centered">
  <div class="comparison-block">
@@ -337,8 +358,9 @@
 </img-comparison-slider>
   </div>
   </div>
-  </div>
-<br><br>
+      </div></div>
+</section>
+
 
 <script
   defer
